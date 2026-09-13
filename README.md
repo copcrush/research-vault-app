@@ -1,5 +1,7 @@
 # ResearchVault App
 
+**Live portfolio:** [Open ResearchVault](https://research-vault-app-five.vercel.app/projects) · [Frontend source](https://github.com/copcrush/research-vault-app) · [Go API source](https://github.com/copcrush/research-vault-api)
+
 A research project workspace built with **Next.js App Router, TypeScript, and Tailwind CSS**. This frontend accompanies [research-vault-api](https://github.com/copcrush/research-vault-api), an idiomatic Go REST API backed by PostgreSQL.
 
 ## Portfolio demo
