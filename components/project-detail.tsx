@@ -91,14 +91,13 @@ export function ProjectDetail({ id }: { id: string; }) {
             <section className="project-future" aria-labelledby="future-heading">
               <Icon name="spark" size={22} />
               <h2 id="future-heading">Your research starts here.</h2>
-              <p>This project is saved. Document management and questions grounded in your research are planned for a future phase.</p>
+              <p>This project is saved. Research AI supports planning conversations; document-grounded answers and file management are still future work.</p>
               <div className="future-controls">
                 <button disabled>
                   <Icon name="file" size={17} />Add document <span>Soon</span>
                 </button>
-                <button disabled>
-                  <Icon name="spark" size={17} />Ask Research AI <span>Soon</span>
-                </button>
+                <Link href="/research-ai" className="secondary-button">
+                  <Icon name="spark" size={17} />Open Research AI</Link>
               </div>
             </section>
           </>}

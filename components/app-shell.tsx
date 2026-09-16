@@ -10,10 +10,10 @@ const navigation: { label: string; icon: IconName; href?: string; }[] = [
   { label: "Overview", icon: "grid", href: "/" },
   { label: "Projects", icon: "folder", href: "/projects" },
   { label: "Documents", icon: "file" },
-  { label: "Research AI", icon: "spark" },
+  { label: "Research AI", icon: "spark", href: "/research-ai" },
 ];
 
-export function AppShell({ children, activeNav = "Overview" }: { children: ReactNode; activeNav?: "Overview" | "Projects"; }) {
+export function AppShell({ children, activeNav = "Overview" }: { children: ReactNode; activeNav?: "Overview" | "Projects" | "Research AI"; }) {
   return (
     <div className="app-shell">
       <a className="skip-link" href="#workspace">Skip to workspace</a>
@@ -81,7 +81,7 @@ export function AppShell({ children, activeNav = "Overview" }: { children: React
               <p>Built around your research.<br />Designed for your boundaries.</p>
             </div>
             <div className="version">
-              <span className="status-dot" /> {isDemo ? "Portfolio demo" : "Local development"} <span>v0.2</span>
+              <span className="status-dot" /> {isDemo ? "Portfolio demo" : "Local development"} <span>v0.3</span>
             </div>
           </div>
         </aside>

@@ -11,3 +11,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 # ResearchVault app
 
 Standalone frontend repository; Go API source: https://github.com/copcrush/research-vault-api. Preserve the existing navy/slate UI. Public Vercel builds use NEXT_PUBLIC_DEMO_MODE=true: projects are synthetic/browser-only and never call the backend. Local mode (false) uses API_ORIGIN via the same-origin rewrite. Keep the demo label and source links visible. No real confidential data, secrets, authentication claims, AI, or document uploads. Use React state and fetch; avoid new libraries without a concrete need. Run lint, typecheck, build and verify demo and local modes.
+
+## Authorized Local AI extension
+
+The user authorized local AI chat through Ollama on the Mac, plus a clearly labeled scripted portfolio preview. /research-ai provides chat; GET /api/v1/ai/status and POST /api/v1/ai/chat are opt-in through LOCAL_AI_ENABLED. The Go handler sends only recent messages and optional project name/description to the configured local model. No files, retrieval, RAG, cloud fallback, or conversation persistence. Ollama runtime/models are ignored; the user explicitly approved ~/.ollama for runtime configuration. Keep the real API/Ollama local and Vercel demo endpoints disabled. Test local-model failures/cancellation, and do not imply scripted public replies are generated. This scoped authorization supersedes earlier AI-disabled statements; documents and other future modules remain out of scope.

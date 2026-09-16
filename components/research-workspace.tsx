@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Icon, type IconName } from "./icon";
 
 const prompts: { icon: IconName; text: string; }[] = [
@@ -60,7 +61,8 @@ export function ResearchWorkspace() {
           </div>
         </div>
         <p id="ai-availability" className="availability">
-          <span className="hollow-dot" /> AI is not enabled in this preview. No questions are sent or stored.</p>
+          <span className="hollow-dot" /> Open Research AI for local chat or the public scripted preview. This overview does not send questions.</p>
+        <Link href="/research-ai" className="secondary-button">Open Research AI</Link>
         <div className="prompt-examples" aria-label="Example questions for future Research AI">{prompts.map((prompt) => <div className="prompt-example" key={prompt.text}>
           <Icon name={prompt.icon} size={16} />
           <span>{prompt.text}</span>

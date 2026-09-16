@@ -18,7 +18,7 @@ The public demo demonstrates frontend interaction. The companion repository cont
 - Typed fetch client and same-origin Next.js proxy for local Go development.
 - Separate demo adapter; no additional state-management library.
 
-Documents, AI/RAG, authentication, teams, and citations are future work. This is not a production confidential-data system.
+Documents, RAG, authentication, teams, and citations are future work. Local AI chat is available as described below. This is not a production confidential-data system.
 
 ## Run locally
 
@@ -44,3 +44,7 @@ Import **research-vault-app** from GitHub, use the repository root and the Next.
 ## Architecture
 
 App Router pages → React components → typed project client → either browser demo storage or same-origin Go API rewrite. Live persistence and business rules are implemented in the companion Go repository. Demo storage models the same user workflow but is not a backend or security boundary.
+
+## Research AI
+
+`/research-ai` supports real Ollama chat in local mode through the Go API, with model readiness, project metadata context, recent conversation, cancellation and errors. Enable LOCAL_AI_ENABLED on the Go API, then run this frontend with NEXT_PUBLIC_DEMO_MODE=false. Public Vercel builds show explicitly labeled predefined examples, with the inference endpoint disabled. No files, RAG, or verified citations are available.
